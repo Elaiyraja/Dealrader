@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DealKart – Best Student & Budget Tech Deals in India</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="DealKart – Discover the best budget tech deals, student essentials, and gadgets under ₹999 in India. Handpicked Amazon products with honest reviews." />
+  <meta name="keywords" content="budget tech India, student gadgets, best deals Amazon India, earbuds under 1000, laptop accessories, best buy India" />
+  <meta name="author" content="DealKart" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (for WhatsApp/social sharing) -->
+  <meta property="og:title" content="DealKart – Best Budget Tech Deals India" />
+  <meta property="og:description" content="Handpicked Amazon deals for Indian students. Save big on earbuds, power banks, laptop accessories & more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/dealkart" />
+  <meta property="og:image" content="assets/images/og-cover.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======= HEADER ======= -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Deal<span>Kart</span> 🛒</a>
+      <nav id="nav">
+        <a href="#featured">Featured</a>
+        <a href="#categories">Categories</a>
+        <a href="#under999">Under ₹999</a>
+        <a href="#blog">Tips</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-toggle" aria-label="Search" onclick="toggleSearch()">🔍</button>
+        <button class="hamburger" aria-label="Menu" onclick="toggleNav()">☰</button>
+      </div>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="Search products... (e.g. earbuds, power bank)" oninput="filterProducts()" />
+        <button onclick="toggleSearch()">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">🇮🇳 Made for Indian Students</div>
+      <h1>Best Budget Tech<br /><span>Deals in India</span></h1>
+      <p>Handpicked Amazon products under ₹999. No fluff, just the best value for money.</p>
+      <div class="hero-cta">
+        <a href="#featured" class="btn btn-primary">Shop Deals 🔥</a>
+        <a href="#under999" class="btn btn-outline">Under ₹999 ⚡</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>500+</strong><span>Products</span></div>
+        <div class="stat"><strong>4.5★</strong><span>Avg Rating</span></div>
+        <div class="stat"><strong>₹999</strong><span>Max Budget</span></div>
+      </div>
+    </div>
+    <div class="hero-float float1">🎧</div>
+    <div class="hero-float float2">⚡</div>
+    <div class="hero-float float3">💻</div>
+    <div class="hero-float float4">📱</div>
+  </section>
+
+  <!-- ======= TICKER ======= -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>🔥 Flash Sale Live</span>
+      <span>⚡ Power Bank ₹549</span>
+      <span>🎧 Earbuds ₹799</span>
+      <span>💡 LED Desk Lamp ₹349</span>
+      <span>🖱️ Wireless Mouse ₹449</span>
+      <span>📦 Free Delivery on ₹499+</span>
+      <span>🔥 Flash Sale Live</span>
+      <span>⚡ Power Bank ₹549</span>
+      <span>🎧 Earbuds ₹799</span>
+      <span>💡 LED Desk Lamp ₹349</span>
+      <span>🖱️ Wireless Mouse ₹449</span>
+      <span>📦 Free Delivery on ₹499+</span>
+    </div>
+  </div>
+
+  <!-- ======= CATEGORIES ======= -->
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Shop by Category</h2>
+        <p>Everything a student needs under one roof</p>
+      </div>
+      <div class="categories-grid">
+        <button class="cat-card active" onclick="filterCategory('all')">
+          <span class="cat-icon">🛍️</span>
+          <span>All Products</span>
+        </button>
+        <button class="cat-card" onclick="filterCategory('audio')">
+          <span class="cat-icon">🎧</span>
+          <span>Audio</span>
+        </button>
+        <button class="cat-card" onclick="filterCategory('charging')">
+          <span class="cat-icon">⚡</span>
+          <span>Charging</span>
+        </button>
+        <button class="cat-card" onclick="filterCategory('laptop')">
+          <span class="cat-icon">💻</span>
+          <span>Laptop Acc.</span>
+        </button>
+        <button class="cat-card" onclick="filterCategory('stationery')">
+          <span class="cat-icon">📓</span>
+          <span>Stationery</span>
+        </button>
+        <button class="cat-card" onclick="filterCategory('lighting')">
+          <span class="cat-icon">💡</span>
+          <span>Lighting</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FEATURED PRODUCTS ======= -->
+  <section id="featured" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2>🔥 Featured Deals</h2>
+        <p>Top picks this week — updated daily</p>
+      </div>
+      <div class="sort-bar">
+        <span>Sort by:</span>
+        <button class="sort-btn active" onclick="sortProducts('popular')">Popular</button>
+        <button class="sort-btn" onclick="sortProducts('price-low')">Price ↑</button>
+        <button class="sort-btn" onclick="sortProducts('price-high')">Price ↓</button>
+        <button class="sort-btn" onclick="sortProducts('rating')">Rating</button>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Products injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= UNDER ₹999 SECTION ======= -->
+  <section id="under999" class="section">
+    <div class="container">
+      <div class="under999-banner">
+        <div class="under999-text">
+          <div class="badge-pill">⚡ Best Value</div>
+          <h2>Best Under <span>₹999</span></h2>
+          <p>Premium feel. Student budget. All handpicked from Amazon India.</p>
+          <button class="btn btn-primary" onclick="filterCategory('under999'); document.getElementById('featured').scrollIntoView()">
+            See All Deals →
+          </button>
+        </div>
+        <div class="under999-grid" id="under999Grid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= BLOG / TIPS ======= -->
+  <section id="blog" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2>📖 Buying Guides</h2>
+        <p>Honest advice to help you spend wisely</p>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-emoji">🎧</div>
+          <div class="blog-tag">Audio</div>
+          <h3>Top 5 Earbuds Under ₹999 in 2024</h3>
+          <p>We tested 12 budget earbuds so you don't have to. Here's what actually sounds good.</p>
+          <a href="#" class="blog-link">Read Guide →</a>
+        </article>
+        <article class="blog-card">
+          <div class="blog-emoji">⚡</div>
+          <div class="blog-tag">Charging</div>
+          <h3>Best Power Banks for Students (2024)</h3>
+          <p>Never run out of battery during lectures. These 10000mAh options won't break the bank.</p>
+          <a href="#" class="blog-link">Read Guide →</a>
+        </article>
+        <article class="blog-card">
+          <div class="blog-emoji">💻</div>
+          <div class="blog-tag">Laptop</div>
+          <h3>Must-Have Laptop Accessories Under ₹500</h3>
+          <p>Cooling pads, keyboard covers, and more — the complete student laptop setup.</p>
+          <a href="#" class="blog-link">Read Guide →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= AFFILIATE DISCLAIMER ======= -->
+  <div class="disclaimer">
+    <div class="container">
+      <p>⚠️ <strong>Affiliate Disclosure:</strong> DealKart is a participant in the Amazon Associates Programme, an affiliate advertising programme designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.in. We may earn a small commission at no extra cost to you when you purchase through our links. All recommendations are independent and honest.</p>
+    </div>
+  </div>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Deal<span>Kart</span> 🛒</div>
+        <p>Helping Indian students find the best tech deals since 2024.</p>
+        <div class="social-links">
+          <a href="#" title="Instagram">📸 Instagram</a>
+          <a href="#" title="WhatsApp">💬 WhatsApp</a>
+          <a href="#" title="Telegram">✈️ Telegram</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#featured">Featured Deals</a>
+        <a href="#under999">Under ₹999</a>
+        <a href="#categories">Categories</a>
+        <a href="#blog">Buying Guides</a>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Affiliate Disclosure</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 DealKart. All links redirect to Amazon.in. Prices may vary.</p>
+    </div>
+  </footer>
+
+  <!-- ======= PRODUCT MODAL ======= -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ======= BACK TO TOP ======= -->
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
